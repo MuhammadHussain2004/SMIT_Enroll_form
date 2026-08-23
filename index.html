@@ -9,12 +9,6 @@
       content="Fictional course registration interface created for a front-end assignment. This demo does not represent an organization and does not collect or submit data."
     />
     <link rel="icon" href="./media/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./styling/style.css" />
   </head>
   <body>
@@ -172,7 +166,7 @@
     <main class="form-section">
       <div class="container">
         <div class="form-card">
-          <form>
+          <form autocomplete="off">
             <!-- Location & Course Details -->
             <fieldset>
               <legend><svg class="icon"><use href="#i-map-pin" /></svg>Location &amp; Course Details</legend>
@@ -254,67 +248,37 @@
 
             <!-- Sample-only information -->
             <fieldset>
-              <legend><svg class="icon"><use href="#i-user" /></svg>Personal Information</legend>
+              <legend><svg class="icon"><use href="#i-user" /></svg>Sample Profile</legend>
               <div class="form-grid">
                 <div class="form-group">
-                  <label for="fullName">Full Name <span class="req">*</span></label>
+                  <label for="displayName">Display Name <span class="req">*</span></label>
                   <div class="input-wrap">
                     <svg class="icon"><use href="#i-user" /></svg>
-                    <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="100" placeholder="Enter your full name" />
+                    <input type="text" id="displayName" name="displayName" required minlength="3" maxlength="40" placeholder="Use a sample name" />
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="fatherName">Father Name <span class="req">*</span></label>
+                  <label for="learningGoal">Learning Goal <span class="req">*</span></label>
                   <div class="input-wrap">
                     <svg class="icon"><use href="#i-user" /></svg>
-                    <input type="text" id="fatherName" name="fatherName" required minlength="3" maxlength="100" placeholder="Enter father's name" />
-                  </div>
-                </div>
-                <div class="form-group full">
-                  <label for="dob">Date of Birth <span class="req">*</span></label>
-                  <div class="input-wrap">
-                    <svg class="icon"><use href="#i-calendar" /></svg>
-                    <input type="date" id="dob" name="dob" required max="2026-08-23" />
+                    <input type="text" id="learningGoal" name="learningGoal" required minlength="3" maxlength="100" placeholder="Example: build websites" />
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email <span class="req">*</span></label>
-                  <div class="input-wrap">
-                    <svg class="icon"><use href="#i-mail" /></svg>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
-                  </div>
+                  <label for="experience">Experience Level <span class="req">*</span></label>
+                  <select id="experience" name="experience" required>
+                    <option value="" selected disabled hidden>Select experience level</option>
+                    <option>New to this topic</option>
+                    <option>Some practice</option>
+                    <option>Comfortable</option>
+                  </select>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone <span class="req">*</span></label>
+                  <label for="demoCode">Demo Code <span class="req">*</span></label>
                   <div class="input-wrap">
-                    <svg class="icon"><use href="#i-phone" /></svg>
-                    <input type="tel" id="phone" name="phone" required maxlength="15" placeholder="Enter phone number" />
+                    <svg class="icon"><use href="#i-file-text" /></svg>
+                    <input type="text" id="demoCode" name="demoCode" required pattern="DEMO-[0-9]{3}" placeholder="Example: DEMO-123" />
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="fatherPhone">Father's Phone <span class="req">*</span></label>
-                  <div class="input-wrap">
-                    <svg class="icon"><use href="#i-phone" /></svg>
-                    <input type="tel" id="fatherPhone" name="fatherPhone" required maxlength="15" placeholder="Enter phone number" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="cnic">Sample ID Number <span class="req">*</span></label>
-                  <div class="input-wrap">
-                    <svg class="icon"><use href="#i-id-card" /></svg>
-                    <input type="number" id="cnic" name="cnic" required maxlength="15" placeholder="Enter ID number" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="fatherCnic">Sample Guardian ID <span class="req">*</span></label>
-                  <div class="input-wrap">
-                    <svg class="icon"><use href="#i-id-card" /></svg>
-                    <input type="number" id="fatherCnic" name="fatherCnic" required maxlength="15" placeholder="Enter ID number" />
-                  </div>
-                </div>
-                <div class="form-group full">
-                  <label for="address">Sample Address <span class="req">*</span><span class="char-count">(min. 10 characters)</span></label>
-                  <textarea id="address" name="address" required minlength="10" maxlength="220" rows="3" placeholder="Use sample text only (minimum 10 characters)"></textarea>
                 </div>
               </div>
             </fieldset>
@@ -364,23 +328,6 @@
                     <label class="radio-option"><input type="radio" name="hasLaptop" value="yes" required /> Yes</label>
                     <label class="radio-option"><input type="radio" name="hasLaptop" value="no" required /> No</label>
                   </div>
-                </div>
-              </div>
-            </fieldset>
-
-            <!-- Sample-only upload control -->
-            <fieldset>
-              <legend><svg class="icon"><use href="#i-upload" /></svg>Upload Picture</legend>
-              <div class="upload-box">
-                <div class="upload-icon-circle"><svg class="icon"><use href="#i-upload" /></svg></div>
-                <label for="picture-upload" class="upload-btn">+ Upload Picture</label>
-                <input id="picture-upload" type="file" accept="image/jpeg,image/jpg,image/png" />
-                <div class="upload-rules">
-                  <p>• With white or blue background</p>
-                  <p>• File size must be less than 1MB</p>
-                  <p>• File type: jpg, jpeg, png</p>
-                  <p>• Use a placeholder image only</p>
-                    <p>• No uploaded file is stored or sent</p>
                 </div>
               </div>
             </fieldset>
