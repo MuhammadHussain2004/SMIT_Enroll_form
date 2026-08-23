@@ -92,6 +92,23 @@ img {
   object-fit: contain;
 }
 
+.demo-logo {
+  color: var(--blue);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.demo-logo span {
+  color: var(--green);
+}
+
+.footer-demo-logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
 .nav-toggle-checkbox {
   display: none;
 }

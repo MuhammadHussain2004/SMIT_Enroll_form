@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enrollment Form Demo | Educational Assignment 10</title>
+    <title>Course Registration UI Demo | Front-End Assignment</title>
     <meta
       name="description"
-      content="Educational enrollment form demo for Assignment 10. This is not an official Saylani website and does not collect or submit data."
+      content="Fictional course registration interface created for a front-end assignment. This demo does not represent an organization and does not collect or submit data."
     />
     <link rel="icon" href="./media/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,7 +80,7 @@
     <nav class="navbar">
       <div class="nav-inner">
         <a class="logo" href="./index.html">
-          <img src="./media/logo.png" alt="SMIT - Saylani Mass IT Training" />
+          <span class="demo-logo">FORM<span>LAB</span></span>
         </a>
 
         <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
@@ -152,9 +152,9 @@
           <svg class="icon sep"><use href="#i-chevron-down" style="transform: rotate(-90deg)" /></svg>
           <span>Enroll Now</span>
         </nav>
-        <h1>Registration Form</h1>
-        <p>Explore a responsive enrollment-form layout created for a front-end assignment.</p>
-        <p class="demo-notice">Educational assignment demo - not an official Saylani website. Do not enter real personal information.</p>
+        <h1>Course Registration</h1>
+        <p>Explore a responsive registration interface created for a front-end assignment.</p>
+        <p class="demo-notice">Fictional UI demo - this page is not connected to any organization. Use sample information only; nothing is stored or submitted.</p>
       </div>
     </header>
 
@@ -252,7 +252,7 @@
               </div>
             </fieldset>
 
-            <!-- Personal Information -->
+            <!-- Sample-only information -->
             <fieldset>
               <legend><svg class="icon"><use href="#i-user" /></svg>Personal Information</legend>
               <div class="form-grid">
@@ -299,22 +299,22 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="cnic">ID Number <span class="req">*</span></label>
+                  <label for="cnic">Sample ID Number <span class="req">*</span></label>
                   <div class="input-wrap">
                     <svg class="icon"><use href="#i-id-card" /></svg>
                     <input type="number" id="cnic" name="cnic" required maxlength="15" placeholder="Enter ID number" />
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="fatherCnic">Father's ID Number <span class="req">*</span></label>
+                  <label for="fatherCnic">Sample Guardian ID <span class="req">*</span></label>
                   <div class="input-wrap">
                     <svg class="icon"><use href="#i-id-card" /></svg>
                     <input type="number" id="fatherCnic" name="fatherCnic" required maxlength="15" placeholder="Enter ID number" />
                   </div>
                 </div>
                 <div class="form-group full">
-                  <label for="address">Address <span class="req">*</span><span class="char-count">(min. 10 characters)</span></label>
-                  <textarea id="address" name="address" required minlength="10" maxlength="220" rows="3" placeholder="Enter your complete address (minimum 10 characters)"></textarea>
+                  <label for="address">Sample Address <span class="req">*</span><span class="char-count">(min. 10 characters)</span></label>
+                  <textarea id="address" name="address" required minlength="10" maxlength="220" rows="3" placeholder="Use sample text only (minimum 10 characters)"></textarea>
                 </div>
               </div>
             </fieldset>
@@ -354,7 +354,7 @@
                     <option>Friend / Family</option>
                     <option>Website</option>
                     <option>Newspaper / TV</option>
-                    <option>Saylani Welfare Center</option>
+                    <option>Community Center</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -368,7 +368,7 @@
               </div>
             </fieldset>
 
-            <!-- Upload Picture -->
+            <!-- Sample-only upload control -->
             <fieldset>
               <legend><svg class="icon"><use href="#i-upload" /></svg>Upload Picture</legend>
               <div class="upload-box">
@@ -379,34 +379,34 @@
                   <p>• With white or blue background</p>
                   <p>• File size must be less than 1MB</p>
                   <p>• File type: jpg, jpeg, png</p>
-                  <p>• Upload your recent passport size picture</p>
-                  <p>• Your face should be clearly visible without any glasses</p>
+                  <p>• Use a placeholder image only</p>
+                    <p>• No uploaded file is stored or sent</p>
                 </div>
               </div>
             </fieldset>
 
-            <!-- Terms and Conditions -->
+            <!-- Demo acknowledgement -->
             <fieldset>
               <legend><svg class="icon"><use href="#i-shield" /></svg>Terms and Conditions</legend>
               <div class="terms-box">
                 <label class="check-row">
                   <input type="checkbox" name="agreement1" required />
-                  <span>I hereby solemnly declare that all information provided in this application is true and accurate to the best of my knowledge. Furthermore, I agree to abide by all current and future rules, regulations, and policies established by SMIT.</span>
+                  <span>I understand this is a fictional front-end demo and will use sample information only.</span>
                 </label>
                 <label class="check-row">
                   <input type="checkbox" name="agreement2" required />
-                  <span>I accept the responsibility to maintain good conduct throughout the program and commit to focusing solely on learning. I will not engage in any political, unethical, or unrelated activities during my enrollment. Any violation may result in immediate cancellation of my admission.</span>
+                  <span>I understand that this page is not an official enrollment service.</span>
                 </label>
                 <label class="check-row">
                   <input type="checkbox" name="agreement3" required />
-                  <span>Upon completion of the course, I agree to successfully complete any project assigned by SMIT as part of the program requirements.</span>
+                  <span>I understand that this form does not send, save, or process submitted information.</span>
                 </label>
                 <label class="check-row">
                   <input type="checkbox" name="agreement4" required />
-                  <span>Female students are required to wear an abaya or hijab while attending classes.</span>
+                  <span>I will not enter real identity, contact, or payment information in this demo.</span>
                 </label>
                 <div class="terms-links">
-                  <p style="margin: 0">By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+                  <p style="margin: 0">This educational demo has no privacy policy, account system, or backend.</p>
                 </div>
               </div>
             </fieldset>
@@ -415,7 +415,7 @@
               <svg class="icon"><use href="#i-alert" /></svg>
               <div>
                 <p class="title">Important Notice:</p>
-                <p>Please ensure all information provided is accurate. Incomplete or false information may result in rejection of your application.</p>
+                <p>Use sample values only. The demo button performs no submission and no information leaves this browser.</p>
               </div>
             </div>
 
@@ -432,36 +432,16 @@
     <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-logos">
-          <img src="./media/logo.png" alt="Saylani Mass IT Training" />
-          <a href="https://saylaniwelfare.com/" target="_blank" rel="noopener noreferrer">
-            <img src="./media/saylani_logo.png" alt="Saylani Welfare International Trust" style="height: 40px" />
-          </a>
+          <span class="demo-logo footer-demo-logo">FORM<span>LAB</span></span>
         </div>
 
         <div class="footer-grid">
           <div class="f-about">
-            <p class="desc">Empowering Pakistan's youth with world-class IT education and training programs to build a brighter digital future.</p>
+            <p class="desc">A fictional course registration interface created for a front-end assignment.</p>
             <ul class="contact-list">
-              <li><svg class="icon"><use href="#i-map-pin" /></svg><span>A-25, Bahadurabad Chowrangi, Karachi, Pakistan</span></li>
-              <li><svg class="icon"><use href="#i-phone" /></svg><a href="tel:+922134161365">+92 21 111 729 526</a></li>
-              <li><svg class="icon"><use href="#i-mail" /></svg><a href="mailto:saylanimass@gmail.com">saylanimass@gmail.com</a></li>
+              <li><svg class="icon"><use href="#i-map-pin" /></svg><span>Fictional demo interface</span></li>
+              <li><svg class="icon"><use href="#i-shield" /></svg><span>No data collection</span></li>
             </ul>
-            <div class="social-row">
-              <a href="https://www.facebook.com/saylani.smit" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon"><use href="#i-facebook" /></svg></a>
-              <a href="https://x.com/OfficialSwit" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg class="icon"><use href="#i-twitter" /></svg></a>
-              <a href="https://www.linkedin.com/company/saylanimassit/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
-              <a href="https://www.instagram.com/saylani.smit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon"><use href="#i-instagram" /></svg></a>
-              <a href="https://www.youtube.com/@SaylaniMassITTraining" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
-            </div>
-            <a class="play-badge" href="#" target="_blank" rel="noopener noreferrer">
-              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="#ffc107" d="m23 12c0 .75-.42 1.41-1.03 1.75l-5.2 2.89-4.4-4.64 4.4-4.64 5.2 2.89c.61.34 1.03 1 1.03 1.75z" />
-                <path fill="#03a9f4" d="m12.37 12-10.8 11.39c-.36-.36-.57-.85-.57-1.39v-20c0-.54.21-1.03.57-1.39z" />
-                <path fill="#f44336" d="m12.37 12 4.4 4.64-12.8 7.11c-.29.16-.62.25-.97.25-.56 0-1.07-.23-1.43-.61z" />
-                <path fill="#4caf50" d="m16.77 7.36-4.4 4.64-10.8-11.39c.36-.38.87-.61 1.43-.61.35 0 .68.09.97.25z" />
-              </svg>
-              <span class="play-text"><small>Get it on</small><strong>Google Play</strong></span>
-            </a>
           </div>
 
           <div class="f-links">
@@ -502,7 +482,7 @@
 
       <div class="footer-bottom">
         <div class="footer-bottom-inner">
-          <p>© 2013 - 2026 <strong>Saylani Mass IT Training</strong>. All rights reserved.</p>
+          <p>Front-end assignment demo. No organization affiliation.</p>
           <div class="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
