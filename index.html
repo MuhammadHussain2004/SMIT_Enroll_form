@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enroll Now | Saylani Mass IT Training (Clone) - Assignment 10</title>
+    <link rel="icon" href="./media/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styling/style.css" />
+  </head>
+  <body>
+    <!-- ============ ICON SPRITE (no JS, pure SVG reuse) ============ -->
+    <svg style="display: none">
+      <defs>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+        <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+        <symbol id="i-graduation-cap" viewBox="0 0 24 24">
+          <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+          <path d="M22 10v6" />
+          <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </symbol>
+        <symbol id="i-map-pin" viewBox="0 0 24 24">
+          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+          <circle cx="12" cy="10" r="3" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24">
+          <path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+          <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+        </symbol>
+        <symbol id="i-id-card" viewBox="0 0 24 24">
+          <path d="M16 10h2" /><path d="M16 14h2" /><path d="M6.17 15a3 3 0 0 1 5.66 0" /><circle cx="9" cy="11" r="2" /><rect x="2" y="5" width="20" height="14" rx="2" />
+        </symbol>
+        <symbol id="i-upload" viewBox="0 0 24 24">
+          <path d="M12 3v12" /><path d="m17 8-5-5-5 5" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+        </symbol>
+        <symbol id="i-alert" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" />
+        </symbol>
+        <symbol id="i-file-text" viewBox="0 0 24 24">
+          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" />
+        </symbol>
+        <symbol id="i-clipboard-list" viewBox="0 0 24 24">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" />
+        </symbol>
+        <symbol id="i-clipboard-check" viewBox="0 0 24 24">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="m9 14 2 2 4-4" />
+        </symbol>
+        <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></symbol>
+        <symbol id="i-twitter" viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></symbol>
+        <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" /></symbol>
+      </defs>
+    </svg>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html">
+          <img src="./media/logo.png" alt="SMIT - Saylani Mass IT Training" />
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <details class="dropdown-wrap">
+                <summary>Courses <svg class="icon chev"><use href="#i-chevron-down" /></svg></summary>
+                <div class="dropdown-panel">
+                  <div class="dropdown-col">
+                    <h4><svg class="icon"><use href="#i-graduation-cap" /></svg>Development</h4>
+                    <ul>
+                      <li><a href="#">Web Development</a></li>
+                      <li><a href="#">Mobile App Development</a></li>
+                      <li><a href="#">DevOps Engineer</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <h4><svg class="icon"><use href="#i-graduation-cap" /></svg>Networking &amp; Security</h4>
+                    <ul>
+                      <li><a href="#">Networking Essentials</a></li>
+                      <li><a href="#">Cybersecurity Essentials</a></li>
+                      <li><a href="#">SOC Analyst</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <h4><svg class="icon"><use href="#i-graduation-cap" /></svg>Designing</h4>
+                    <ul>
+                      <li><a href="#">Graphic Designing with AI</a></li>
+                      <li><a href="#">Video Content Creation</a></li>
+                      <li><a href="#">3D Animation</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <h4><svg class="icon"><use href="#i-graduation-cap" /></svg>AI &amp; Entrepreneurship</h4>
+                    <ul>
+                      <li><a href="#">AI &amp; Data Science</a></li>
+                      <li><a href="#">Agentic AI</a></li>
+                      <li><a href="#">AI &amp; Game Creators</a></li>
+                    </ul>
+                  </div>
+                  <a class="see-all" href="#">See All Courses <svg class="icon"><use href="#i-arrow-up-right" /></svg></a>
+                </div>
+              </details>
+            </li>
+            <li><a href="#">Campuses</a></li>
+            <li><a href="#">Check Result</a></li>
+          </ul>
+
+          <a class="btn-enroll" href="#form-top">Enroll Now <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow-up-right" /></svg></a>
+        </div>
+
+        <label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle menu">
+          <svg class="icon"><use href="#i-menu" /></svg>
+        </label>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="form-top">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="container hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./index.html"><svg class="icon"><use href="#i-graduation-cap" /></svg>Home</a>
+          <svg class="icon sep"><use href="#i-chevron-down" style="transform: rotate(-90deg)" /></svg>
+          <span>Enroll Now</span>
+        </nav>
+        <h1>Registration Form</h1>
+        <p>Start your journey towards excellence. Fill out the form to apply for our courses.</p>
+      </div>
+    </header>
+
+    <!-- ============ QUICK TABS ============ -->
+    <div class="quick-tabs-wrap">
+      <div class="quick-tabs">
+        <a class="tab active" href="#"><svg class="icon"><use href="#i-clipboard-list" /></svg>Registration Form</a>
+        <a class="tab" href="#"><svg class="icon"><use href="#i-id-card" /></svg>Download ID Card</a>
+        <a class="tab" href="#"><svg class="icon"><use href="#i-clipboard-check" /></svg>Entry Test Status</a>
+        <a class="tab" href="#"><svg class="icon"><use href="#i-file-text" /></svg>Result</a>
+      </div>
+    </div>
+
+    <!-- ============ FORM ============ -->
+    <main class="form-section">
+      <div class="container">
+        <div class="form-card">
+          <form>
+            <!-- Location & Course Details -->
+            <fieldset>
+              <legend><svg class="icon"><use href="#i-map-pin" /></svg>Location &amp; Course Details</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="country">Select Country <span class="req">*</span></label>
+                  <select id="country" name="country" required>
+                    <option value="" selected disabled hidden>Select country</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="saudi-arabia">Saudi Arabia</option>
+                    <option value="uae">United Arab Emirates</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">United States</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="classPreference">Select class preference <span class="req">*</span></label>
+                  <select id="classPreference" name="classPreference" required>
+                    <option value="" selected disabled hidden>Select class preference</option>
+                    <option value="physical">Physical</option>
+                    <option value="online">Online</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="genderSelect">Select Gender <span class="req">*</span></label>
+                  <select id="genderSelect" name="gender" required>
+                    <option value="" selected disabled hidden>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="city">Select City <span class="req">*</span></label>
+                  <select id="city" name="city" required>
+                    <option value="" selected disabled hidden>Select city</option>
+                    <option value="karachi">Karachi</option>
+                    <option value="lahore">Lahore</option>
+                    <option value="islamabad">Islamabad</option>
+                    <option value="rawalpindi">Rawalpindi</option>
+                    <option value="faisalabad">Faisalabad</option>
+                    <option value="multan">Multan</option>
+                    <option value="peshawar">Peshawar</option>
+                    <option value="quetta">Quetta</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="course">Select Course <span class="req">*</span></label>
+                  <select id="course" name="course" required>
+                    <option value="" selected disabled hidden>Select course</option>
+                    <option>Web Development</option>
+                    <option>AI &amp; Data Science</option>
+                    <option>Agentic AI</option>
+                    <option>Graphic Designing with AI</option>
+                    <option>3D Animation</option>
+                    <option>Mobile App Development (React Native)</option>
+                    <option>DevOps Engineer</option>
+                    <option>Cybersecurity Essentials</option>
+                    <option>Networking Essentials</option>
+                    <option>Video Content Creation</option>
+                    <option>IT Support Engineer</option>
+                    <option>SOC Analyst / CyberOps Associate</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="campus">Select Campus</label>
+                  <select id="campus" name="campus">
+                    <option value="" selected disabled hidden>Select campus</option>
+                    <option>Main Campus</option>
+                    <option>North Nazimabad Campus</option>
+                    <option>Gulshan Campus</option>
+                    <option>Online / Correspondence</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Personal Information -->
+            <fieldset>
+              <legend><svg class="icon"><use href="#i-user" /></svg>Personal Information</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Full Name <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-user" /></svg>
+                    <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="100" placeholder="Enter your full name" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fatherName">Father Name <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-user" /></svg>
+                    <input type="text" id="fatherName" name="fatherName" required minlength="3" maxlength="100" placeholder="Enter father's name" />
+                  </div>
+                </div>
+                <div class="form-group full">
+                  <label for="dob">Date of Birth <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-calendar" /></svg>
+                    <input type="date" id="dob" name="dob" required max="2026-08-23" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-mail" /></svg>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-phone" /></svg>
+                    <input type="tel" id="phone" name="phone" required maxlength="15" placeholder="Enter phone number" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fatherPhone">Father's Phone <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-phone" /></svg>
+                    <input type="tel" id="fatherPhone" name="fatherPhone" required maxlength="15" placeholder="Enter phone number" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cnic">ID Number <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-id-card" /></svg>
+                    <input type="number" id="cnic" name="cnic" required maxlength="15" placeholder="Enter ID number" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fatherCnic">Father's ID Number <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <svg class="icon"><use href="#i-id-card" /></svg>
+                    <input type="number" id="fatherCnic" name="fatherCnic" required maxlength="15" placeholder="Enter ID number" />
+                  </div>
+                </div>
+                <div class="form-group full">
+                  <label for="address">Address <span class="req">*</span><span class="char-count">(min. 10 characters)</span></label>
+                  <textarea id="address" name="address" required minlength="10" maxlength="220" rows="3" placeholder="Enter your complete address (minimum 10 characters)"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Education & Technical Details -->
+            <fieldset>
+              <legend><svg class="icon"><use href="#i-graduation-cap" /></svg>Education &amp; Technical Details</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="computerProficiency">Computer Proficiency <span class="req">*</span></label>
+                  <select id="computerProficiency" name="computerProficiency" required>
+                    <option value="" selected disabled hidden>Select your computer proficiency</option>
+                    <option>None</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                    <option>Expert</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="lastQualification">Last Qualification <span class="req">*</span></label>
+                  <select id="lastQualification" name="lastQualification" required>
+                    <option value="" selected disabled hidden>Last qualification</option>
+                    <option>Under Matric</option>
+                    <option>Matric</option>
+                    <option>Intermediate</option>
+                    <option>Bachelors</option>
+                    <option>Masters</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label for="referral">Where did you hear about us? <span class="req">*</span></label>
+                  <select id="referral" name="referral_source" required>
+                    <option value="" selected disabled hidden>Where did you hear about us?</option>
+                    <option>Social Media</option>
+                    <option>Friend / Family</option>
+                    <option>Website</option>
+                    <option>Newspaper / TV</option>
+                    <option>Saylani Welfare Center</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group full">
+                  <label>Do you have a Laptop? <span class="req">*</span></label>
+                  <div class="radio-row">
+                    <label class="radio-option"><input type="radio" name="hasLaptop" value="yes" required /> Yes</label>
+                    <label class="radio-option"><input type="radio" name="hasLaptop" value="no" required /> No</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Upload Picture -->
+            <fieldset>
+              <legend><svg class="icon"><use href="#i-upload" /></svg>Upload Picture</legend>
+              <div class="upload-box">
+                <div class="upload-icon-circle"><svg class="icon"><use href="#i-upload" /></svg></div>
+                <label for="picture-upload" class="upload-btn">+ Upload Picture</label>
+                <input id="picture-upload" type="file" accept="image/jpeg,image/jpg,image/png" />
+                <div class="upload-rules">
+                  <p>• With white or blue background</p>
+                  <p>• File size must be less than 1MB</p>
+                  <p>• File type: jpg, jpeg, png</p>
+                  <p>• Upload your recent passport size picture</p>
+                  <p>• Your face should be clearly visible without any glasses</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Terms and Conditions -->
+            <fieldset>
+              <legend><svg class="icon"><use href="#i-shield" /></svg>Terms and Conditions</legend>
+              <div class="terms-box">
+                <label class="check-row">
+                  <input type="checkbox" name="agreement1" required />
+                  <span>I hereby solemnly declare that all information provided in this application is true and accurate to the best of my knowledge. Furthermore, I agree to abide by all current and future rules, regulations, and policies established by SMIT.</span>
+                </label>
+                <label class="check-row">
+                  <input type="checkbox" name="agreement2" required />
+                  <span>I accept the responsibility to maintain good conduct throughout the program and commit to focusing solely on learning. I will not engage in any political, unethical, or unrelated activities during my enrollment. Any violation may result in immediate cancellation of my admission.</span>
+                </label>
+                <label class="check-row">
+                  <input type="checkbox" name="agreement3" required />
+                  <span>Upon completion of the course, I agree to successfully complete any project assigned by SMIT as part of the program requirements.</span>
+                </label>
+                <label class="check-row">
+                  <input type="checkbox" name="agreement4" required />
+                  <span>Female students are required to wear an abaya or hijab while attending classes.</span>
+                </label>
+                <div class="terms-links">
+                  <p style="margin: 0">By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="notice-box">
+              <svg class="icon"><use href="#i-alert" /></svg>
+              <div>
+                <p class="title">Important Notice:</p>
+                <p>Please ensure all information provided is accurate. Incomplete or false information may result in rejection of your application.</p>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <svg class="icon"><use href="#i-file-text" /></svg>
+              Submit Registration
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-logos">
+          <img src="./media/logo.png" alt="Saylani Mass IT Training" />
+          <a href="https://saylaniwelfare.com/" target="_blank" rel="noopener noreferrer">
+            <img src="./media/saylani_logo.png" alt="Saylani Welfare International Trust" style="height: 40px" />
+          </a>
+        </div>
+
+        <div class="footer-grid">
+          <div class="f-about">
+            <p class="desc">Empowering Pakistan's youth with world-class IT education and training programs to build a brighter digital future.</p>
+            <ul class="contact-list">
+              <li><svg class="icon"><use href="#i-map-pin" /></svg><span>A-25, Bahadurabad Chowrangi, Karachi, Pakistan</span></li>
+              <li><svg class="icon"><use href="#i-phone" /></svg><a href="tel:+922134161365">+92 21 111 729 526</a></li>
+              <li><svg class="icon"><use href="#i-mail" /></svg><a href="mailto:saylanimass@gmail.com">saylanimass@gmail.com</a></li>
+            </ul>
+            <div class="social-row">
+              <a href="https://www.facebook.com/saylani.smit" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="icon"><use href="#i-facebook" /></svg></a>
+              <a href="https://x.com/OfficialSwit" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg class="icon"><use href="#i-twitter" /></svg></a>
+              <a href="https://www.linkedin.com/company/saylanimassit/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin" /></svg></a>
+              <a href="https://www.instagram.com/saylani.smit/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon"><use href="#i-instagram" /></svg></a>
+              <a href="https://www.youtube.com/@SaylaniMassITTraining" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="icon"><use href="#i-youtube" /></svg></a>
+            </div>
+            <a class="play-badge" href="#" target="_blank" rel="noopener noreferrer">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#ffc107" d="m23 12c0 .75-.42 1.41-1.03 1.75l-5.2 2.89-4.4-4.64 4.4-4.64 5.2 2.89c.61.34 1.03 1 1.03 1.75z" />
+                <path fill="#03a9f4" d="m12.37 12-10.8 11.39c-.36-.36-.57-.85-.57-1.39v-20c0-.54.21-1.03.57-1.39z" />
+                <path fill="#f44336" d="m12.37 12 4.4 4.64-12.8 7.11c-.29.16-.62.25-.97.25-.56 0-1.07-.23-1.43-.61z" />
+                <path fill="#4caf50" d="m16.77 7.36-4.4 4.64-10.8-11.39c.36-.38.87-.61 1.43-.61.35 0 .68.09.97.25z" />
+              </svg>
+              <span class="play-text"><small>Get it on</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+
+          <div class="f-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">Chat Us</a></li>
+              <li><a href="#form-top">Enroll Now</a></li>
+              <li><a href="#">Download ID Card</a></li>
+              <li><a href="#">Entry Test Status</a></li>
+              <li><a href="#">Check Results</a></li>
+            </ul>
+          </div>
+
+          <div class="f-courses">
+            <h3>Our Courses</h3>
+            <ul>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Agentic AI</a></li>
+              <li><a href="#">AI &amp; Data Science</a></li>
+              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#">3D Animation</a></li>
+            </ul>
+          </div>
+
+          <div class="f-resources">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Campuses</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <p>© 2013 - 2026 <strong>Saylani Mass IT Training</strong>. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
